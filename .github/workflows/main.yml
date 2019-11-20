@@ -1,4 +1,4 @@
-name: TESTs
+name: tests
 
 on: push
 
@@ -8,10 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository contents
-        uses: actions/checkout@v1
-
-      - name: Use action to check for CRLF endings
-        uses: erclu/check-crlf@v1
-        with: # omit this mapping to use default path
-          path: ./a-custom-path
+      - name: Sleep
+        uses: maddox/actions/sleep@master
+        with:
+          args: 15
