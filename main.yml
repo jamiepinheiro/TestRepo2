@@ -1,18 +1,24 @@
-name: PR Auto-merge
-
-on: repository_dispatch
-
+name: automerge
+on:
+  pull_request:
+    types:
+      - labeled
+      - unlabeled
+      - synchronize
+      - opened
+      - edited
+      - ready_for_review
+      - reopened
+      - unlocked
+  pull_request_review:
+    types:
+      - submitted
+  status: {}
 jobs:
-  build:
+  automerge:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger pr-autobuild action
-        uses: nikhilaii93/pr-autobuild@master
+      - name: automerge
+        uses: "pascalgn/automerge-action@733fcc62d711705eae9cd66fcf49c93c1d1a98c6"
         env:
-          GITHUB_TOKEN: ${{ secrets.bot_token }}
-          GITHUB_NAME: jamiepinheiro
-          DEFAULT_APPROVAL_COUNT_ENV: 1
-          BUILD_COMMENT_ENV: "OK to test"
-          PR_LABEL_ENV: RELEASE
-          DEFAULT_MERGE: squash
-          DELETE_BRANCH_ENV: true
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
