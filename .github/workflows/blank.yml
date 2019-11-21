@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: merge-on-green
-        uses: "pascalgn/automerge-action@81b1d6dc0637009760e051c80fb4d060d495aa7d"
+        uses: "pascalgn/automerge-action@8bab27d2212be1b3a0767ee5ee58f7a255b38812"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"  
           MERGE_LABELS: "merge-on-green" 
