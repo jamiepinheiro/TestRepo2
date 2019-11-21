@@ -1,0 +1,12 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  delete-merged-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: delete-merged-branch
+        uses: SvanBoxel/delete-merged-branch@master
+    env:
+      GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" 
