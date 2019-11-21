@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: delete-merged-branch
-        uses: SvanBoxel/delete-merged-branch@master
+        uses: jessfraz/branch-cleanup-action@master
     env:
       GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" 
