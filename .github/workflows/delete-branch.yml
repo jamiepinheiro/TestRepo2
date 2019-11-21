@@ -8,3 +8,5 @@ jobs:
     steps:
       - name: delete-merged-branch
         uses: SvanBoxel/delete-merged-branch@master
+    env:
+      GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" 
