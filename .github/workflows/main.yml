@@ -1,6 +1,6 @@
 name: tests
 
-on: [push, pull_request]
+on: push
 
 jobs:
   example-workflow:
@@ -11,4 +11,4 @@ jobs:
       - name: Sleep
         uses: maddox/actions/sleep@master
         with:
-          args: 200
+          args: 10
