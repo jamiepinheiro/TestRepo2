@@ -11,4 +11,4 @@ jobs:
       - name: Sleep
         uses: maddox/actions/sleep@master
         with:
-          args: 15
+          args: 200
