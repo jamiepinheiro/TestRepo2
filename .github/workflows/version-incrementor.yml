@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Bump version and push tag
-      uses: TriPSs/conventional-changelog-action@master
+      uses: TriPSs/conventional-changelog-action@1d3335a655ebe52398cc110c6185f839293161cf
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         git-message: 'chore(release): {version}'
