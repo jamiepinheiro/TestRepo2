@@ -26,7 +26,5 @@ jobs:
         with:
           tag-prefix: ''
           token: ${{ secrets.GITHUB_TOKEN_ACTION }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "cat package.json"
         run: cat ./package.json
